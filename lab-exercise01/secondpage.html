@@ -3,8 +3,25 @@
 <head>
     <title>Second page - Website</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function compute() {
+            var firstvalue = parseInt(document.getElementById("first-num").value);
+            var secvalue = parseInt(document.getElementById("second-num").value);
+            document.getElementById("output").value = firstvalue+secvalue;
+        }
+    </script>
 </head>
   <body>
-      <p>second page</p>
+      <h1>Second Page HTML</h1>
+      <p>Sum of two</p>
+
+      <form>
+          <fieldset>
+              <label for="first-num">Enter First Number: <input id="first-num" name="first-num" type="text" /></label>
+              <label for="second-num">Enter Second Number: <input id="second-num" name="second-num" type="text" /></label>
+              <label for="output">Output: <input id="output" name="output" type="text" disabled/></label>
+              <p><input type="button" size="60" value="Compute" onclick="compute();"/></p>
+          </fieldset>
+      </form>
   </body>
 </html>
