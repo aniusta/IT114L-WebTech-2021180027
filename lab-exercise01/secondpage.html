@@ -13,15 +13,37 @@
 </head>
   <body>
       <h1>Second Page HTML</h1>
-      <p>Sum of two</p>
+        
 
-      <form>
-          <fieldset>
-              <label for="first-num">Enter First Number: <input id="first-num" name="first-num" type="text" /></label>
-              <label for="second-num">Enter Second Number: <input id="second-num" name="second-num" type="text" /></label>
-              <label for="output">Output: <input id="output" name="output" type="text" disabled/></label>
-              <p><input type="button" size="60" value="Compute" onclick="compute();"/></p>
-          </fieldset>
-      </form>
+        <form>
+            <h2>Sum of two</h2>
+            <fieldset>
+                <label for="first-num">First Number: 
+                    <input id="first-num" 
+                    name="first-num" 
+                    type="text" 
+                    class="form-control"
+                    placeholder="Enter First Number" />
+                </label>
+                <label for="second-num">Second Number: 
+                    <input id="second-num" 
+                    name="second-num" 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Enter Second Number"/> 
+                </label>
+                <label for="output">Output: 
+                    <input id="output" 
+                    name="output" 
+                    type="text" 
+                    class="form-control" 
+                    disabled/>
+                </label>
+                <p><input type="button" 
+                    size="60" 
+                    value="Compute" 
+                    onclick="compute();"/></p>
+            </fieldset>
+        </form>
   </body>
 </html>

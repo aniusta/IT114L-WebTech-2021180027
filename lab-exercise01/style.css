@@ -1,24 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 body 
 {
-    font-family: 'Trebuchet MS';
+    font-family: 'Poppins', sans-serif;
     width: 100%;
-    height: 100vh;
     margin: 0;
-    background-color: #1b1b32;
-    color: #f5f6f7;
+    background-color: #ffebe9;
+    color: #000f;
     font-size: 16px;
 }
 
-h1, p
+h1
 {
     margin: 1em auto;
     text-align: center;
+    font-style: italic;
+    font-weight: 300;
 }
 
-form
+h2
 {
-    width: 80vh;
+    margin: 1em 0 0 0;
+    font-style: italic;
+    font-weight: 300; 
+}
+
+form {
+    width: 50%;
+    padding: 2rem;
     margin: 0 auto;
+    background: #ffffff;
+    color: #000f;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px #f6d1cb;
 }
 
 label
@@ -27,8 +40,46 @@ label
     margin: 0.5rem auto;
 }
 
+.form-control 
+{
+    display: block;
+    border: 1px solid lightgray;
+    width: 100%;
+    border-radius: .25rem;
+}
+
 fieldset
 {
-    padding: 25px 25px 25px 25px;
-
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    border: none;
+    border-bottom: 2px solid lightblue;
 }
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.25rem;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 1rem 0;
+}
+
+input[type="button"]
+{
+    width: 30%;
+    margin: auto;
+    border-radius: .25rem;
+    border: none;
+}
+
+input[type="button"]:hover
+{
+    width: 30%;
+    margin: auto;
+    border-radius: .25rem;
+    border: 1px;
+    background-color: lightgray;
+}
+
