@@ -4,46 +4,93 @@
     <title>Second page - Website</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        function compute() {
+        function computeSum() {
             var firstvalue = parseInt(document.getElementById("first-num").value);
             var secvalue = parseInt(document.getElementById("second-num").value);
             document.getElementById("output").value = firstvalue+secvalue;
         }
+
+        function calculateAge(dateString) {
+            var today = new Date();
+            var birthDate = new Date(dateString);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }       
+        function computeAge() {
+            var birthdate = document.getElementById("birthdate").value;
+            var age = calculateAge(birthdate);
+            document.getElementById("age").value = "Your age is " + age + " years.";
+        }
     </script>
 </head>
   <body>
-      <h1>Second Page HTML</h1>
-        
+    <div class="header">
+        <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png">
+        <h1>Second Page HTML</h1>
+    </div>
+      <div class="video-container">
+        <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/RBcX8BSi25U" 
+        frameborder="0" 
+        allowfullscreen>
+        </iframe>
+      </div>
 
-        <form>
-            <h2>Sum of two</h2>
-            <fieldset>
-                <label for="first-num">First Number: 
-                    <input id="first-num" 
-                    name="first-num" 
-                    type="text" 
-                    class="form-control"
-                    placeholder="Enter First Number" />
-                </label>
-                <label for="second-num">Second Number: 
-                    <input id="second-num" 
-                    name="second-num" 
-                    type="text" 
-                    class="form-control" 
-                    placeholder="Enter Second Number"/> 
-                </label>
-                <label for="output">Output: 
-                    <input id="output" 
-                    name="output" 
-                    type="text" 
-                    class="form-control" 
-                    disabled/>
-                </label>
-                <p><input type="button" 
-                    size="60" 
-                    value="Compute" 
-                    onclick="compute();"/></p>
-            </fieldset>
-        </form>
+    <form>
+        <h2>Sum of two</h2>
+        <fieldset>
+            <label for="first-num">First Number: 
+                <input id="first-num" 
+                name="first-num" 
+                type="text" 
+                class="form-control"
+                placeholder="Enter First Number" />
+            </label>
+            <label for="second-num">Second Number: 
+                <input id="second-num" 
+                name="second-num" 
+                type="text" 
+                class="form-control" 
+                placeholder="Enter Second Number"/> 
+            </label>
+            <label for="output">Output: 
+                <input id="output" 
+                name="output" 
+                type="text" 
+                class="form-control" 
+                disabled/>
+            </label>
+            <p><input type="button" 
+                size="60" 
+                value="Compute" 
+                onclick="computeSum();"/></p>
+        </fieldset>
+        <h2>Age calculator</h2>
+        <fieldset>
+            <label for="birthdate">Birthdate: 
+                <input id="birthdate" 
+                name="birthdate" 
+                type="date" 
+                class="form-control"/>
+            </label>
+            <label for="age">Age: 
+                <input id="age" 
+                name="age" 
+                type="text" 
+                class="form-control" 
+                disabled/>
+            </label>
+            <p><input type="button" 
+                size="60" 
+                value="Compute" 
+                onclick="computeAge();"/></p>
+        </fieldset>
+    </form>
   </body>
 </html>

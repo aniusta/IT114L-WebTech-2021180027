@@ -7,11 +7,12 @@ body
     background-color: #ffebe9;
     color: #000f;
     font-size: 16px;
+    padding-bottom: 1.5cm;
 }
 
 h1
 {
-    margin: 1em auto;
+    margin: 1em;
     text-align: center;
     font-style: italic;
     font-weight: 300;
@@ -83,3 +84,30 @@ input[type="button"]:hover
     background-color: lightgray;
 }
 
+.video-container 
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.video-container iframe 
+{
+    width: 54%;
+    height: 450px;
+    border-radius: .25rem;
+  }
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header img
+{
+    width: 50px;
+    height: 50px;
+}
